@@ -32,37 +32,31 @@ HyMLRaman
 │   └── docx: a dataset of Raman spectra of 6 pharmaceuticals (total 1003 samples), which humans collected from the literature.
 │   └── test: the unseen experimental Raman spectra of 6 pharmaceuticals (in-house Raman measurement) for testing the app.
 ├── utils
-│   ├── utils_data.py: define the functions related to the dataset.
-│   ├── utils_model.py: define the function related to the model.
+│   ├── utils_data.py: defines the functions related to the dataset.
+│   ├── utils_model.py: defines the functions related to the model.
 │   └── utils_plot.py: defines the function related to plotting results.
 │   └── utils_train.py: defines the function related to training.
 │   └── utils_feature.py: defines the function related to feature extraction.
 │   └── utils_ddpm.py: defines the function related to DDPM.
 ├── model
-│   ├── resnet18_10cls_20251115.pth: a trained GNN model.
+│   ├── best_by_acc_12092026.pth: an already trained model.
 ├── output
 │   ├── xgb_on_cnn.pkl: a trained XGBoost model with GNN features and PCA.
 ├── HyMLRaman.ipynb: Main MLRaman code
 └── app.py: user-friendly application for real-time prediction based on PyQt6.
 ```
 # How to run
-Step 1: Download the MLRaman package:
+Step 1: Download the HyMLRaman package:
 
-    git clone https://github.com/nguyen-group/MLRaman.git
+    git clone https://github.com/nguyen-group/HyMLRaman.git
 
 Step 2: Go to the source code in the Raman directory to run the program:
 
-    cd MLRaman
-    jupyter-lab MLRaman.ipynb
+    cd HyMLRaman
+    jupyter-lab HyMLRaman.ipynb
 
-Step 3: For Streamlit application:
+Step 3: For the PyQt application:
 
-    streamlit run app_xgb_streamlit.py
+    python app.py
 
-Note: `app_xgb_streamlit.py` will load `resnet18_10cls_20251115.pth` and `xgb_on_cnn.pkl`, which are stored in the model and output directories, respectively.
-
-# References and citing
-The detailed MLRaman is described in our paper:
-> Q. T. T. Binh, L. T. Phuoc, P. X. Hai, T. B. Phan, V. T. H. Thu* and N. T. Hung*, Rapid machine learning-driven detection of pesticides and dyes using Raman spectroscopy, J. Chem. Inf. Model. 66, 3803-3813 (2026).
-> 
-> [https://doi.org/10.1021/acs.jcim.6c00396](https://doi.org/10.1021/acs.jcim.6c00396)
+Note: `app.py` will load `best_by_acc_12092026.pth`, which is stored in the model and output directories, respectively.
