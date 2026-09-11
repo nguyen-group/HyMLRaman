@@ -15,7 +15,7 @@ from sklearn.decomposition import PCA
 from torchvision import transforms
 
 
-MODEL_PATH = r"D:\VIET BAO CNN\cnn\abx_b3_reg\best_by_acc.pt"
+MODEL_PATH = r"./best_by_acc_12092026.pt"
 
 OUTPUT_PROFILE = os.path.join(
     os.path.dirname(MODEL_PATH),
