@@ -40,6 +40,7 @@ HyMLRaman
 │   └── utils_ddpm.py: defines the function related to DDPM.
 ├── model
 │   ├── best_by_acc_12092026.pth: an already trained model.
+│   └── raman_known_only_domain_profile.npz
 ├── output
 │   ├── xgb_on_cnn.pkl: a trained XGBoost model with GNN features and PCA.
 ├── HyMLRaman.ipynb: Main MLRaman code
@@ -59,4 +60,4 @@ Step 3: For the PyQt application:
 
     python app.py
 
-Note: `app.py` will load `best_by_acc_12092026.pth`, which is stored in the model and output directories, respectively.
+Note: `app.py` will load `best_by_acc_12092026.pth` with `raman_known_only_domain_profile.npz`, which is stored in the model and output directories, respectively.
